@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Product</title>
+
+</head>
+<body style="background-color: #ECF0F1 ">
+<h2><p><b>The-Store</b></p></h2>
+<div id="menu">
+	<ul>
+		<li id="submenu"><img src=Img/IUD.JPG  ></li>
+		<li id="submenu"><a href="#"><b>Login</b></a></li>
+		<li id="submenu"><a href="#"><b>Products</b></a></li>
+		<li id="submenu"><a href="#"><b>New Product</b></a></li>
+	</ul>	
+</div>
+<br><br> <br><br>
+<h3 align="center">New Product</h3>
+<div id="form">
+	<main>
+		<form  action="Products.html" >
+			<label for="Name">
+				<br>
+				<span><b>Name</b></span>
+				<br>
+				<input type="text" placeholder="Ingrese el nombre" name="Name"   id="name" autocomplete="name" required>
+			</label>
+			<br>
+			<label for="Price">
+				<span><b>Price</b></span>
+				<br>
+				<input type="number" placeholder="Ingrese el precio" name="price" id="price"  autocomplete="price" required>
+			</label>
+			<br>
+			<label for="Inventory">
+				<span><b>Inventory</b></span>
+				<br>
+				<input type="number" placeholder="Ingrese el inventario" name="Inventory" id="inventory" autocomplete="inventory" required>
+			</label>
+			<br>
+			<input type="submit" value="Create Product" style="text-decoration: none; color:white"  onclick="hizoClick()"  class="buto"> 
+			<button class="buto"> <a href="index.html" style="text-decoration: none; color:white">Regresar</a></button>
+
+
+			<script>
+				function hizoClick() {
+					var name = document.getElementById("name").value;
+					var price = document.getElementById("price").value;
+					var inventory = document.getElementById("inventory").value;
+					if (name == "" ||price == "" ||inventory == "") {
+						alert("Debes completar todos los campos"); 
+					} else {
+						alert("El formulario se ha enviado correctamente");
+					}
+				}
+			</script>
+		</form>
+	</main>
+</div>
+
+</body>
+</html>
